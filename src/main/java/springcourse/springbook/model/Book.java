@@ -1,6 +1,5 @@
 package springcourse.springbook.model;
 
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -14,5 +13,6 @@ public class Book {
     private String author;
     private int year;
     private String genre;
-    private boolean available;
+    private boolean available = true;
+
 }

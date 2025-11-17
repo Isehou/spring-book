@@ -18,7 +18,7 @@ public class BookRepository {
 
     public Book save(Book book) {
         books.put(book.getId(), book);
-        log.info("Book saved" + book.getTitle());
+        log.info("Книга сохранена" + book.getTitle());
         return book;
     }
 
@@ -33,10 +33,10 @@ public class BookRepository {
     public Book update(int id, Book book) {
         if(books.containsKey(id)) {
             books.put(id, book);
-            log.info("Updated book with id {}", id);
+            log.info("Книга с этим id {} обновлена", id);
             return book;
         } else {
-            log.warn("Books with id {} not found", id);
+            log.warn("Книга с таким id {} не найдена", id);
             return null;
         }
     }
